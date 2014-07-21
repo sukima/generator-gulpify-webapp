@@ -1,0 +1,22 @@
+{
+  "framework": "mocha+chai",
+  "before_tests": "gulp specs",
+  "serve_files": [
+    "public/specs.js"
+  ],
+  "src_files": [
+    "src/**/*.js",
+    "src/**/*.coffee",
+    "test/**/*spec.js",
+    "test/**/*spec.coffee"
+  ],
+  "launch_in_ci": [
+    "PhantomJS"
+  ],
+  "launch_in_dev": [
+    "Chrome",
+    "Firefox",
+    "Safari",
+    "PhantomJS"
+  ]
+}

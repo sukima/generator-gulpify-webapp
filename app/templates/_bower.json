@@ -1,0 +1,23 @@
+{
+  "name": "<%= appname %>",
+  "version": "0.0.0",
+  "authors": [
+    ""
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "jquery": "~2.1.1"
+  },
+  "devDependencies": {
+    "sinon": "~1.10.3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "node": true,
+  "browser": true,
+  "eqnull": true,
+  "expr": true
+}

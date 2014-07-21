@@ -1,0 +1,5 @@
+bower_components/
+node_modules/
+public/specs.js
+public/bundle.js
+public/style.css

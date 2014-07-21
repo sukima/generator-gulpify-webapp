@@ -1,0 +1,12 @@
+{
+    "node": true,
+    "browser": true,
+    "expr": true,
+    "eqnull": true,
+    "indent": 2,
+    "quotmark": "single",
+    "regexp": true,
+    "undef": true,
+    "trailing": true,
+    "white": true
+}
