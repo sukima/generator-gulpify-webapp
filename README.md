@@ -7,6 +7,7 @@ Create a webapp skeleton with the following tools:
 - Gulp
 - Bower
 - Browserify / Browserify-shim
+- Sass
 - CoffeeScript (optional)
 - Testem with Mocha/Chai/Sinon
 
