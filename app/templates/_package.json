@@ -24,6 +24,7 @@
     "gulp-sass": "^0.7.2",
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "^0.3.1",
+    "gulp-serve": "^0.2.0",
     "gulp-util": "^3.0.0",
     "testem": "^0.6.17",
     "vinyl-source-stream": "^0.1.1"

@@ -10,6 +10,7 @@ var header     = require('gulp-header');
 var sass       = require('gulp-sass');
 var concat     = require('gulp-concat');
 var minifyCss  = require('gulp-minify-css');
+var serve      = require('gulp-serve');
 var source     = require('vinyl-source-stream');
 var es         = require('event-stream');
 var browserify = require('browserify');
@@ -55,6 +56,13 @@ function streamHeaderFile(file) {
   );
 }
 
+function reportChange(e) {
+  gutil.log(gutil.template('File <%= file %> was <%= type %>, rebuilding...', {
+    file: e.path,
+    type: e.type
+  }));
+}
+
 gulp.task('style', function() {
   var libsStream = gulp.src(builds.styles.bower);
   var sassStream = gulp.src(builds.styles.entries).pipe(sass());
@@ -89,6 +97,15 @@ gulp.task('clean', function() {
   });
   return gulp.src(buildFiles, {read: false}).pipe(rimraf());
 });
+
+gulp.task('watch', ['browserify', 'style'], function() {
+  gulp.watch(['./src/**/*.js', './src/**/*.coffee'], ['browserify'])
+    .on('change', reportChange);
+  gulp.watch(['./scss/**/*.scss'], ['style'])
+    .on('change', reportChange);
+});
+
+gulp.task('server', ['watch'], serve(destDir));
 
 gulp.task('default', ['browserify', 'style'], function() {
   var buildEnv = isProduction ?
