@@ -1,6 +1,6 @@
 {
   "name": "generator-gulpify-webapp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A gulp/browserify/bower webapp skeleton",
   "keywords": [
     "yeoman-generator"
